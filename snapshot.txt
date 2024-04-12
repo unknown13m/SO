@@ -1,0 +1,279 @@
+Nume: ianuarie5.c
+Path complet: /home/maria/maria_paula/facultate/an2/SDA/ianuarie5.c
+Dimensiune: 1039 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Jan  5 20:22:40 2024
+-rw-rw-r--
+
+
+Nume: 1
+Path complet: /home/maria/maria_paula/facultate/an2/SDA/1
+Dimensiune: 16064 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Jan  5 20:22:44 2024
+-rwxrwxr-x
+
+
+Nume: ianuarie5.cpp
+Path complet: /home/maria/maria_paula/facultate/an2/SDA/ianuarie5.cpp
+Dimensiune: 66 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Jan  5 19:57:54 2024
+-rw-rw-r--
+
+
+Nume: ianuarie12.c
+Path complet: /home/maria/maria_paula/facultate/an2/SDA/ianuarie12.c
+Dimensiune: 107 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Jan 12 23:52:45 2024
+-rw-rw-r--
+
+
+Nume: lab5.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/Laborator-Lab_5/Exercitiul/lab5.sh
+Dimensiune: 12 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 16:30:43 2024
+-rw-rw-r--
+
+
+Nume: send_message.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/send_message.sh
+Dimensiune: 579 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 16:47:06 2024
+-rwxr-xr-x
+
+
+Nume: auth.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/auth.sh
+Dimensiune: 502 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 16:40:39 2024
+-rwxr-xr-x
+
+
+Nume: userId.txt
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/userId.txt
+Dimensiune: 36 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 17:41:04 2024
+-rw-rw-r--
+
+
+Nume: send_message.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Laborator-252be4d7158aa55b689303346c7d278fe97e94ae/Exercitiul/send_message.sh
+Dimensiune: 540 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: auth.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Laborator-252be4d7158aa55b689303346c7d278fe97e94ae/Exercitiul/auth.sh
+Dimensiune: 502 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: set_chat_id.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Laborator-252be4d7158aa55b689303346c7d278fe97e94ae/Exercitiul/set_chat_id.sh
+Dimensiune: 104 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: chatGenerator.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Laborator-252be4d7158aa55b689303346c7d278fe97e94ae/Exercitiul/chatGenerator.sh
+Dimensiune: 176 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: display_messages.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Laborator-252be4d7158aa55b689303346c7d278fe97e94ae/Exercitiul/display_messages.sh
+Dimensiune: 943 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: Exercitiul.md
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Laborator-252be4d7158aa55b689303346c7d278fe97e94ae/Exercitiul/Exercitiul.md
+Dimensiune: 2053 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: config.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Laborator-252be4d7158aa55b689303346c7d278fe97e94ae/Exercitiul/config.sh
+Dimensiune: 549 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: README.md
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Laborator-252be4d7158aa55b689303346c7d278fe97e94ae/README.md
+Dimensiune: 699 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rw-rw-r--
+
+
+Nume: set_chat_id.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/set_chat_id.sh
+Dimensiune: 104 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: chatGenerator.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/chatGenerator.sh
+Dimensiune: 176 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: display_messages.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/display_messages.sh
+Dimensiune: 1323 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 17:36:47 2024
+-rwxr-xr-x
+
+
+Nume: lab5.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/lab5.sh
+Dimensiune: 0 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 16:45:30 2024
+-rw-rw-r--
+
+
+Nume: chatId.txt
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/chatId.txt
+Dimensiune: 6 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 17:38:20 2024
+-rw-rw-r--
+
+
+Nume: Exercitiul.md
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/Exercitiul.md
+Dimensiune: 2053 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: c_cpp_properties.json
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/.vscode/c_cpp_properties.json
+Dimensiune: 373 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Apr  5 17:35:17 2024
+-rw-rw-r--
+
+
+Nume: config.sh
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/Exercitiul/config.sh
+Dimensiune: 549 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rwxr-xr-x
+
+
+Nume: README.md
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L5/README.md
+Dimensiune: 699 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Mar 22 12:53:23 2024
+-rw-rw-r--
+
+
+Nume: soweek2project.c
+Path complet: /home/maria/maria_paula/facultate/an2/SO/soweek2project.c
+Dimensiune: 3059 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Apr 12 13:43:59 2024
+-rw-rw-r--
+
+
+Nume: 1
+Path complet: /home/maria/maria_paula/facultate/an2/SO/1
+Dimensiune: 16848 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Apr 12 13:44:03 2024
+-rwxrwxr-x
+
+
+Nume: L6
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L6
+Dimensiune: 914 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Apr  5 11:23:43 2024
+-rw-rw-r--
+
+
+Nume: L6.c
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L6.c
+Dimensiune: 7579 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Apr  5 16:29:30 2024
+-rw-rw-r--
+
+
+Nume: L7.c
+Path complet: /home/maria/maria_paula/facultate/an2/SO/L7.c
+Dimensiune: 4954 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Apr  5 17:42:16 2024
+-rw-rw-r--
+
+
+Nume: snapshot.txt
+Path complet: /home/maria/maria_paula/facultate/an2/SO/snapshot.txt
+Dimensiune: 6963 bytes
+Are hard links: Nu
+Este symbolic link: Nu
+Ultima modificare: Fri Apr 12 13:44:04 2024
+-rw-r--r--
+
+
