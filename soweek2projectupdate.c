@@ -88,132 +88,125 @@ void traverseaza_director(const char *dir_path, int fd)
     closedir(dir);
 }
 
-
-
-void actualizeaza_snapshot(const char *dir_path, const char *output_dir) 
+int existaSnapshot(const char *director, const int nr)//daca numerotez snapshot-urile cu cifra "nr", verific daca si am un snapshot cu cifra "nr"
 {
-    char snapshot_path[PATH_MAX];
-    snprintf(snapshot_path, sizeof(snapshot_path), "%s/snapshot_%s.txt", output_dir, basename((char *)dir_path));
+    DIR *d = opendir(director);
+    struct dirent *intr;
 
-    int snapshot_fd = open(snapshot_path, O_WRONLY | O_CREAT | O_APPEND, 0644);
-    if (snapshot_fd == -1) 
+    if(d == NULL)
     {
-        perror("Nu s-a putut deschide sau crea snapshot-ul");
-        return;
+        printf("Error.\n");
+        exit(-1);
     }
 
-    dprintf(snapshot_fd, "Snapshot pentru directorul: %s\n", dir_path);
-    traverseaza_director(dir_path, snapshot_fd);
-
-    close(snapshot_fd);
+    while ((intr = readdir(d)) != NULL) 
+    {
+        if(strstr(intr->d_name, ".txt") != NULL)
+        {
+            char *valid = intr->d_name;
+            for(int i = 0; i < strlen(valid); i++)
+            {
+                if((valid[i] >= '0' && valid[i] <= '9') && valid[i] == nr + '0')
+                {
+                    closedir(d);
+                    return 0;
+                }
+            }
+        }
+    }
+    closedir(d);
+    return 1;
 }
 
-
+int verif_daca_este_director(const char *director)
+{
+    struct stat s;
+    if (stat(director, &s) == 0) //aici verific daca avem un director sau nu.
+    {
+        if (S_ISDIR(s.st_mode)) 
+            return 0;  //=>este director
+        else
+            return 1;  //=>NU este director
+    } 
+    return 1; 
+}
 int main(int argc, char **argv) 
 {
-    if (argc < 3 || argc > 12) // verificăm dacă numărul de argumente este între 3 și 12
-    {
-        printf("Nu sunt argumente suficiente./Sunt prea multe argumente.\n");
-        exit(EXIT_FAILURE);
-    }
-    
-
-    if (strcmp(argv[1], "-o") != 0) //verificare sintaxa cmdl
-    {
-        printf("Structura incorecta. Rescrie sintaxa.\n");
-        exit(EXIT_FAILURE);
-    }
-    
-    char *output_dir = argv[2]; // directorul de ieșire
-    int f; // variabila de cale/path
-    for (int i = 3; i <= 12; i++)
-    {
-        struct stat st;
-        if (stat(argv[i], &st) == -1 || !S_ISDIR(st.st_mode)) 
-        {
-            fprintf(stderr, "%s NU este un director existent.\n", argv[i]);
-            exit(EXIT_FAILURE);
-        }
-
-        char snapshot_path[PATH_MAX];
-        snprintf(snapshot_path, sizeof(snapshot_path), "%s/snapshot_%d.txt", output_dir, i - 3);
-
-        f = open(snapshot_path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-        if (f == -1) 
-        {
-            perror("Nu s-a putut deschide sau crea snapshot-ul");
-            exit(EXIT_FAILURE);
-        }
-
-        traverseaza_director(argv[i], f);
-        close(f);
-    }
-    if (!output_dir) 
-    {
-        fprintf(stderr, "Specificati un director de iesire folosind optiunea '-o'.\n");
-        exit(EXIT_FAILURE);
-    }
-    int i;
-    for (i = 1; i < argc; i++) 
-    {
-        if (strcmp(argv[i], "-o") == 0) 
-        {
-            if (i + 1 < argc) 
-            {
-                output_dir = argv[i + 1];
-                break;
-            } 
-            else 
-            {
-                fprintf(stderr, "Argumentul '-o' trebuie urmat de numele directorului de ieșire.\n");
-                exit(EXIT_FAILURE);
-            }
-        }
-    }
-
-    
-
-    // actualizez snapshot-urile pentru fiecare director pe care l-am numit in linia de comanda
-    for (i = 1; i < argc; i++) 
-    {
-        if (strcmp(argv[i], "-o") != 0) 
-        {
-            struct stat st;
-            if (stat(argv[i], &st) == -1 || !S_ISDIR(st.st_mode)) 
-            {
-                fprintf(stderr, "%s NU este un director existent.\n", argv[i]);
-                exit(EXIT_FAILURE);
-            }
-
-            actualizeaza_snapshot(argv[i], output_dir);
-        }
-    }
-
-
-
     /*if (argc != 2) 
     {
         fprintf(stderr, "Usage: %s <directory>\n", argv[0]);
-        exit(EXIT_FAILURE);
+        exit(-1);
+    }*/
+    //2 cazuri: 1)argumente prea putine daca argc < 2; 2)argumente prea multe daca arcg>10.
+    if(argc < 2)
+    {
+        printf("Argumente insuficiente.\n");
+        exit(-1);
     }
+
+    else if(argc > 10)
+    {
+        printf("Argumentele depasesc numarul maxim.\n");
+        exit(-1);
+    }
+    if(strcmp(argv[1], "-o") != 0)
+    {
+        printf("Structura gresita la sintaxa.\n");
+        exit(-1);
+    }
+
 
     struct stat st;
     if (stat(argv[1], &st) == -1 || !S_ISDIR(st.st_mode)) 
     {
         fprintf(stderr, "%s NU este un director existent.\n", argv[1]);
-        exit(EXIT_FAILURE);
+        exit(-1);
+    }
+    char director_output[1024];
+    snprintf(director_output, sizeof(director_output), "%s", argv[2]);
+    int table[10] = {0};//max 10 argumente
+    int full_path, i;
+    for(i = 2; i <= 12; i++)
+    {
+        int c = verif_daca_este_director(argv[i]);
+        if(c == 0)
+        {
+            char drum[1024];
+            snprintf(drum, sizeof(drum), "%s/SnApShoT%d.txt", director_output, i - 2);
+            table[i - 2] = 1;
+            full_path = open(drum, O_WRONLY | O_CREAT | O_TRUNC, 0644);//imi updatez fisierul de snapshot de fiecare data cand rulez
+            traverseaza_director(argv[i], full_path);
+            close(full_path);
+        }
+    }
+    //daca schimbam ordinea argumentelor raman fisierele vechi -> acestea trebuie sterse
+    for(int i = 0; i < 10; i++)
+    {
+        if(table[i] == 0 && existaSnapshot(director_output, i) == 0)
+        {
+            char drum[1000];
+            snprintf(drum, sizeof(drum), "%s/snapshot%d.txt", director_output, i);
+            if(unlink(drum) != 0)//sterg fisierul "drum"
+            {
+                printf("Nu se poate stereg snapshot.\n");
+                exit(-1);
+            }
+        }
     }
 
-    int fd = open("snapshot.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+
+    /*
+    int fd = open("sNaPsHoT.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
     //0644 = fisier obisnuit; 6 = 4 + 2, ne arata ca owner-ul are permisiuni de read si write; 4 = grupul are permisiuni de read-only; 4 = "others" au si ei permisiuni de read-only
     if (fd == -1) {
         perror("Nu s-a putut deschide snapshot-ul.txt");
-        exit(EXIT_FAILURE);
+        exit(-1);
     }
+    
 
     traverseaza_director(argv[1], fd);
-    close(fd);*/
-
+    close(fd);
+    */
     
     return 0;
 }
